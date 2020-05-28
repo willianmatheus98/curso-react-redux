@@ -4,6 +4,7 @@ import ComParametro from "./components/basicos/ComParametro";
 import Fragmento from "./components/basicos/Fragmento";
 import Aleatorio from "./components/basicos/Aleatorio";
 import Familia from "./components/basicos/Familia";
+import FamiliaMembro from "./components/basicos/FamiliaMembro";
 import Card from "./components/layouts/Card";
 
 import "./App.css";
@@ -14,7 +15,13 @@ export default () => {
       <h1>Fundamentos React</h1>
       <div className="cards">
         <Card title="Família" color="#69D2E7">
-          <Familia lastname="Wilson" />
+          <Familia lastname="Wilson">
+            <FamiliaMembro firstame="John"  />
+            <FamiliaMembro firstame="Mara" />
+            <FamiliaMembro firstame="Eric" />
+            <FamiliaMembro firstame="Ray" />
+            <FamiliaMembro firstame="Jay" />
+          </Familia>
         </Card>
 
         <Card title="Aleatório" color="#fa6900">
