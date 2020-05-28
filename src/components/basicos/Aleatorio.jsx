@@ -6,15 +6,15 @@ export default (props) => {
   let random = getRandomNumber(min, max);
 
   function getRandomNumber(min, max) {
-    return Math.random() * (max - min) + min;
+    return parseInt(Math.random() * (max - min) + min);
   }
 
   return (
     <>
-      <h1>
+      <h2>
         Aleatório entre {min} e {max}
-      </h1>
-      <h2>{random}</h2>
+      </h2>
+      <p>{random}</p>
     </>
   );
 };
