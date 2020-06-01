@@ -1,7 +1,19 @@
 export default (props) => {
+  const elseChild = props.children.filter((child) => {
+    return child.type && child.type.name === "Else";
+  })[0];
+
+  const ifChild = props.children.filter((child) => {
+    return child !== elseChild;
+  });
+
   if (props.test) {
-    return props.children;
+    return ifChild;
   } else {
-    return false;
+    return elseChild;
   }
+};
+
+export const Else = (props) => {
+  return props.children;
 };
