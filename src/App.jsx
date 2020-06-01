@@ -8,6 +8,9 @@ import FamiliaMembro from "./components/basicos/FamiliaMembro";
 import Card from "./components/layouts/Card";
 import ListaAlunos from "./components/repeticao/ListaAlunos";
 import TabelaProdutos from "./components/repeticao/TabelaProdutos";
+import ParOuImpar from "./components/condicional/ParOuImpar";
+import UsuarioInfo from "./components/condicional/UsuarioInfo";
+
 import alunos from "./data/alunos";
 import produtos from "./data/produtos";
 
@@ -18,6 +21,13 @@ export default () => {
     <div id="app">
       <h1>Fundamentos React</h1>
       <div className="cards">
+        <Card title="Par ou ímpar" color="#FFC33C">
+          <ParOuImpar numero={159} />
+          <UsuarioInfo usuario={{ nome: "John" }} />
+          <UsuarioInfo usuario={{ email: "john@example.com" }} />
+          <UsuarioInfo />
+        </Card>
+
         <Card title="Lista de produtos" color="#A0Daaa">
           <TabelaProdutos produtos={produtos} />
         </Card>
