@@ -1,4 +1,6 @@
 import React from "react";
+
+import Input from "./components/formulario/Input";
 import Primeiro from "./components/basicos/Primeiro";
 import ComParametro from "./components/basicos/ComParametro";
 import Fragmento from "./components/basicos/Fragmento";
@@ -23,7 +25,11 @@ export default () => {
     <div id="app">
       <h1>Fundamentos React</h1>
       <div className="cards">
-      <Card title="Comunicação indireta" color="#eea990">
+        <Card title="Componente controlado" color="#eea760">
+          <Input />
+        </Card>
+
+        <Card title="Comunicação indireta" color="#eea990">
           <IndiretaPai />
         </Card>
 
